@@ -9,6 +9,9 @@ namespace Spryker\Shared\Chart\Dependency\Plugin;
 
 use Generated\Shared\Transfer\ChartDataTransfer;
 
+/**
+ * @deprecated Use `Spryker\Shared\ChartExtension\Dependency\Plugin\ChartPluginInterface` instead.
+ */
 interface ChartPluginInterface
 {
     /**
