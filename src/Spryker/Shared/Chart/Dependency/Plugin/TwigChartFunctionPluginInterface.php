@@ -7,6 +7,9 @@
 
 namespace Spryker\Shared\Chart\Dependency\Plugin;
 
+/**
+ * @deprecated Use `Spryker\Shared\ChartExtension\Dependency\Plugin\TwigChartFunctionPluginInterface` instead.
+ */
 interface TwigChartFunctionPluginInterface
 {
     /**
