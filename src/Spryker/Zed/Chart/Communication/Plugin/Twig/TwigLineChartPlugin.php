@@ -20,9 +20,6 @@ class TwigLineChartPlugin extends AbstractTwigChartPlugin
      */
     public const TWIG_FUNCTION_NAME = 'lineChart';
 
-    /**
-     * @return string
-     */
     protected function getTemplateName(): string
     {
         return '@Chart/_template/line-chart.twig';

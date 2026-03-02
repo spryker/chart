@@ -34,9 +34,6 @@ class ChartFacadeTest extends Unit
      */
     protected $chartConfig;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -45,9 +42,6 @@ class ChartFacadeTest extends Unit
         $this->chartConfig = new ChartConfig();
     }
 
-    /**
-     * @return void
-     */
     public function testDefaultChartType(): void
     {
         $defaultType = $this->chartFacade->getDefaultChartType();
@@ -55,9 +49,6 @@ class ChartFacadeTest extends Unit
         $this->assertSame($defaultType, $this->chartConfig->getDefaultChartType());
     }
 
-    /**
-     * @return void
-     */
     public function testChartTypes(): void
     {
         $types = $this->chartFacade->getChartTypes();

@@ -21,11 +21,6 @@ use Twig\Environment;
  */
 class TwigChartFunctionServiceProvider extends AbstractPlugin implements ServiceProviderInterface
 {
-    /**
-     * @param \Silex\Application $app
-     *
-     * @return void
-     */
     public function register(Application $app): void
     {
         $app['twig'] = $app->share(
@@ -35,20 +30,10 @@ class TwigChartFunctionServiceProvider extends AbstractPlugin implements Service
         );
     }
 
-    /**
-     * @param \Silex\Application $app
-     *
-     * @return void
-     */
     public function boot(Application $app): void
     {
     }
 
-    /**
-     * @param \Twig\Environment $twig
-     *
-     * @return \Twig\Environment
-     */
     protected function registerChartTwigFunctions(Environment $twig): Environment
     {
         foreach ($this->getChartTwigFunctions() as $function) {
@@ -58,9 +43,6 @@ class TwigChartFunctionServiceProvider extends AbstractPlugin implements Service
         return $twig;
     }
 
-    /**
-     * @return array
-     */
     protected function getChartTwigFunctions(): array
     {
         $functions = [];
