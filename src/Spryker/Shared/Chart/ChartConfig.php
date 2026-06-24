@@ -13,16 +13,22 @@ use Spryker\Shared\Kernel\AbstractSharedConfig;
 class ChartConfig extends AbstractSharedConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const CHART_TYPE_BAR = 'bar';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const CHART_TYPE_PIE = 'pie';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const CHART_TYPE_LINE = 'scatter';
