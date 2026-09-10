@@ -6,5 +6,5 @@
 'use strict';
 
 if (!window.ChartPlotly) {
-    window.ChartPlotly = require('plotly.js');
+    window.ChartPlotly = require('plotly.js-dist-min');
 }
