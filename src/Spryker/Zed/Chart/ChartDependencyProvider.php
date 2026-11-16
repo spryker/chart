@@ -7,72 +7,11 @@
 
 namespace Spryker\Zed\Chart;
 
-use Spryker\Zed\Chart\Communication\Plugin\Twig\TwigBarChartPlugin;
-use Spryker\Zed\Chart\Communication\Plugin\Twig\TwigChartPlugin;
-use Spryker\Zed\Chart\Communication\Plugin\Twig\TwigLineChartPlugin;
-use Spryker\Zed\Chart\Communication\Plugin\Twig\TwigPieChartPlugin;
 use Spryker\Zed\Kernel\AbstractBundleDependencyProvider;
-use Spryker\Zed\Kernel\Container;
 
 /**
  * @method \Spryker\Zed\Chart\ChartConfig getConfig()
  */
 class ChartDependencyProvider extends AbstractBundleDependencyProvider
 {
-    /**
-     * @var string
-     */
-    public const PLUGIN_TWIG_CHART_FUNCTIONS = 'PLUGIN_TWIG_CHART_FUNCTIONS';
-
-    /**
-     * @var string
-     */
-    public const PLUGIN_CHARTS = 'PLUGIN_CHARTS';
-
-    public function provideCommunicationLayerDependencies(Container $container): Container
-    {
-        $container = $this->addTwigChartFunctionPlugins($container);
-        $container = $this->addChartPlugins($container);
-
-        return $container;
-    }
-
-    protected function addTwigChartFunctionPlugins(Container $container): Container
-    {
-        $container->set(static::PLUGIN_TWIG_CHART_FUNCTIONS, function () {
-            return $this->getTwigChartFunctionPlugins();
-        });
-
-        return $container;
-    }
-
-    protected function addChartPlugins(Container $container): Container
-    {
-        $container->set(static::PLUGIN_CHARTS, function () {
-            return $this->getChartPlugins();
-        });
-
-        return $container;
-    }
-
-    /**
-     * @return array<\Spryker\Shared\Chart\Dependency\Plugin\TwigChartFunctionPluginInterface>
-     */
-    protected function getTwigChartFunctionPlugins(): array
-    {
-        return [
-            new TwigPieChartPlugin(),
-            new TwigBarChartPlugin(),
-            new TwigLineChartPlugin(),
-            new TwigChartPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Shared\Chart\Dependency\Plugin\ChartPluginInterface>
-     */
-    protected function getChartPlugins(): array
-    {
-        return [];
-    }
 }

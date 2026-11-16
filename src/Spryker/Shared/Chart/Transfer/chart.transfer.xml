@@ -5,6 +5,7 @@
         <property name="key" type="string"/>
         <property name="title" type="string"/>
         <property name="traces" type="ChartDataTrace[]" singular="trace"/>
+        <property name="view" type="string"/>
     </transfer>
 
     <transfer name="ChartDataTrace">

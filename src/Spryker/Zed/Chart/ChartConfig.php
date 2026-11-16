@@ -7,7 +7,6 @@
 
 namespace Spryker\Zed\Chart;
 
-use Generated\Shared\Transfer\ChartLayoutTransfer;
 use Spryker\Zed\Kernel\AbstractBundleConfig;
 
 /**
@@ -33,15 +32,5 @@ class ChartConfig extends AbstractBundleConfig
     public function getDefaultChartType(): string
     {
         return $this->getSharedConfig()->getDefaultChartType();
-    }
-
-    /**
-     * @api
-     *
-     * @return \Generated\Shared\Transfer\ChartLayoutTransfer
-     */
-    public function getDefaultChartLayout(): ChartLayoutTransfer
-    {
-        return $this->getSharedConfig()->getDefaultChartLayout();
     }
 }

@@ -14,6 +14,8 @@ interface ChartLayoutablePluginInterface extends ChartPluginInterface
     /**
      * Specification:
      * - Returns a ChartLayoutTransfer object with layout for charts.
+     * - Applied by the Yves chart Twig functions of `spryker-shop/chart-widget` only.
+     * - The Back Office chart Twig functions of `spryker/chart-gui` 2.0.0 and later ignore it: the chart size comes from CSS.
      *
      * @api
      *
